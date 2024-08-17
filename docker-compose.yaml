@@ -1,0 +1,11 @@
+services:
+  airgap:
+    build: ./airgap/
+    volumes:
+      - ./airgap/share:/mnt/share:rw
+      - cardano:/home/cardano
+    network_mode: none
+
+volumes:
+  cardano:
+    driver: local
